@@ -9,7 +9,7 @@ args:
   - "8080:8080"
   - -e
   - APP_ENV=production
-  - myorg/backend:latest
+  - node:apline
 workdir: .
 timeout_seconds: 300
 env:

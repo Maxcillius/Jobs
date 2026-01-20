@@ -1,0 +1,16 @@
+name: run-backend
+command: docker
+args:
+  - run
+  - -d
+  - --name
+  - backend
+  - -p
+  - "8080:8080"
+  - -e
+  - APP_ENV=production
+  - myorg/backend:latest
+workdir: .
+timeout_seconds: 300
+env:
+  DOCKER_BUILDKIT: "1"

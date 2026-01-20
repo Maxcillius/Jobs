@@ -1,0 +1,14 @@
+name: redis-cache
+command: docker
+args:
+  - run
+  - --rm
+  - --name
+  - redis-cache
+  - -p
+  - "6379:6379"
+  - redis:7-alpine
+workdir: .
+timeout_seconds: 120
+env:
+  DOCKER_BUILDKIT: "1"

@@ -1,0 +1,14 @@
+name: nginx-service-job
+command: docker
+args:
+  - run
+  - --rm
+  - --name
+  - temporary-nginx
+  - -p
+  - "8081:80"
+  - nginx:alpine
+workdir: .
+timeout_seconds: 300 # Runs for 5 mins, then worker kills it
+env:
+  NGINX_HOST: "localhost"

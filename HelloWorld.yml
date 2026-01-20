@@ -1,0 +1,12 @@
+name: hello-world-job
+command: docker
+args:
+  - run
+  - --rm
+  - alpine:latest
+  - echo
+  - "Hello from the distributed worker!"
+workdir: .
+timeout_seconds: 30
+env:
+  TEST_VAR: "connectivity_check"

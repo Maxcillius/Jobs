@@ -1,0 +1,12 @@
+name: crash-test-job
+command: docker
+args:
+  - run
+  - --rm
+  - alpine:latest
+  - /bin/sh
+  - -c
+  - "echo 'Simulating a critical failure...' && exit 1"
+workdir: .
+timeout_seconds: 20
+env: {}

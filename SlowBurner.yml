@@ -1,0 +1,11 @@
+name: timeout-test-job
+command: docker
+args:
+  - run
+  - --rm
+  - alpine:latest
+  - sleep
+  - "60"
+workdir: .
+timeout_seconds: 10
+env: {}

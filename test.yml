@@ -2,14 +2,14 @@ name: run-backend
 command: docker
 args:
   - run
-  - --rm              
-  - --name           
+  - --rm
+  - --name
   - backend
   - -p
   - "8080:8080"
   - -e
   - APP_ENV=production
-  - node:apline
+  - node:alpine
 workdir: .
 timeout_seconds: 300
 env:

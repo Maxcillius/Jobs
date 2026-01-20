@@ -2,8 +2,8 @@ name: run-backend
 command: docker
 args:
   - run
-  - -d
-  - --name
+  - --rm              
+  - --name           
   - backend
   - -p
   - "8080:8080"

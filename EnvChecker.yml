@@ -1,17 +1,10 @@
 name: env-verification-job
-command: docker
-args:
-  - run
-  - --rm
-  - -e
-  - API_KEY
-  - -e
-  - DB_HOST
-  - alpine:latest
-  - /bin/sh
+image: alpine:latest
+command: /bin/sh
+args: 
   - -c
   - "echo Connecting to $DB_HOST using key $API_KEY"
-workdir: .
+workdir: /tmp 
 timeout_seconds: 20
 env:
   API_KEY: "secret-12345"
